@@ -151,6 +151,7 @@ namespace OAuth
 
             // Generate the OAuth Signature and add it to the parameters
             string signature = this._generateSignature(url, httpMethod, parameters, this._consumer.OauthConfig.OauthSignatureMethod, this._consumer.OauthConfig.ConsumerSecret, oauthTokenSecret, out normalizedUrl, out normalizedUrlWithParameters);
+            signature = OAuthBase.UrlEncode(signature);
             parameters.Add(new QueryParameter("oauth_signature", signature));                 
             
             try
