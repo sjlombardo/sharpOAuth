@@ -69,7 +69,7 @@ namespace OAuth
             this._saveTokenDataInConfiguration(tokens);
             
             // Open Authorization Page
-            this._openAuthorizationPage();
+            //this._openAuthorizationPage();
             return tokens;
         }
 
